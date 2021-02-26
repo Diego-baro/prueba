@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('user', 'UserController');
+Route::resource('rate', 'RateController');
+Route::resource('report', 'ReportController');
+Route::get('reportea/{idguest}/{idbook}','reportController@reporteA');
+Route::get('reporteb/{idguest}/{idbook}','reportController@reporteB');
+Route::get('reportec/{idguest}/{idbook}','reportController@reporteC');
+Route::get('reported/{idguest}/{idbook}','reportController@reporteD');
+
+Auth::routes();
+
+
